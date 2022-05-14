@@ -6,7 +6,7 @@
 /*   By: dcyprien <dcyprien@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/06 16:53:25 by dcyprien          #+#    #+#             */
-/*   Updated: 2020/01/07 08:45:41 by dcyprien         ###   ########.fr       */
+/*   Updated: 2022/05/14 03:11:22 by dcyprien         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,11 +15,12 @@
 
 char	*ft_strdup(const char *s1)
 {
-	char *copy;
+	char	*copy;
 
 	if (s1 != NULL)
 	{
-		if (!(copy = (char *)malloc((ft_strlen(s1) + 1) * sizeof(char))))
+		copy = (char *)malloc((ft_strlen(s1) + 1) * sizeof(char));
+		if (!copy)
 			return (NULL);
 		ft_memmove(copy, s1, ft_strlen(s1) + 1);
 		return (copy);

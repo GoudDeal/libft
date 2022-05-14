@@ -6,13 +6,13 @@
 /*   By: dcyprien <dcyprien@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/18 16:45:49 by dcyprien          #+#    #+#             */
-/*   Updated: 2019/11/18 17:08:52 by dcyprien         ###   ########.fr       */
+/*   Updated: 2022/05/14 02:58:33 by dcyprien         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_lstsize(t_list *lst)
+int	ft_lstsize(t_list *lst)
 {
 	t_list	*i;
 	int		count;

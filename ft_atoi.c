@@ -6,15 +6,15 @@
 /*   By: dcyprien <dcyprien@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/06 15:50:11 by dcyprien          #+#    #+#             */
-/*   Updated: 2020/01/07 08:33:41 by dcyprien         ###   ########.fr       */
+/*   Updated: 2022/05/14 03:02:20 by dcyprien         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_cinset(const char c, const char *set)
+int	ft_cinset(const char c, const char *set)
 {
-	int i;
+	int	i;
 
 	if (set != NULL)
 	{
@@ -30,12 +30,12 @@ int		ft_cinset(const char c, const char *set)
 	return (-1);
 }
 
-int		ft_isspace(const char c)
+int	ft_isspace(const char c)
 {
 	return (ft_cinset(c, "\t\n\r\v\f "));
 }
 
-int		ft_atoi(const char *str)
+int	ft_atoi(const char *str)
 {
 	int	i;
 	int	result;
@@ -45,10 +45,15 @@ int		ft_atoi(const char *str)
 		result = 0;
 		while (ft_isspace(*str))
 			str++;
-		i = str[0] == '-' || str[0] == '+' ? 1 : 0;
+		if (str[0] == '-' || str[0] '+')
+			i = 1;
+		else
+			i = 0;
 		while (str[i] && ft_isdigit(str[i]) != 0)
 			result = result * 10 + (str[i++] - '0');
-		return (str[0] == '-') ? result * -1 : result;
+		if (str[0] == '-')
+			return (result * -1);
+		return (result);
 	}
 	return (0);
 }

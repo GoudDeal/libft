@@ -6,7 +6,7 @@
 /*   By: dcyprien <dcyprien@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/04 14:04:55 by dcyprien          #+#    #+#             */
-/*   Updated: 2020/01/07 08:27:21 by dcyprien         ###   ########.fr       */
+/*   Updated: 2022/05/14 02:58:43 by dcyprien         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ void	ft_bzero(void *s, size_t n)
 	if (s != NULL)
 	{
 		i = 0;
-		buffer = (unsigned char*)s;
+		buffer = (unsigned char *)s;
 		while (i < n)
 		{
 			buffer[i] = 0;

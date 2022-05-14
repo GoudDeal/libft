@@ -6,7 +6,7 @@
 /*   By: dcyprien <dcyprien@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/18 12:17:10 by dcyprien          #+#    #+#             */
-/*   Updated: 2020/01/07 08:43:55 by dcyprien         ###   ########.fr       */
+/*   Updated: 2022/05/14 03:07:54 by dcyprien         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_putnbr_fd(int nb, int fd)
 {
-	long int n;
+	long int	n;
 
 	n = nb;
 	if (n < 0)

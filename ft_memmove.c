@@ -6,7 +6,7 @@
 /*   By: dcyprien <dcyprien@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/05 12:20:32 by dcyprien          #+#    #+#             */
-/*   Updated: 2020/01/07 08:42:27 by dcyprien         ###   ########.fr       */
+/*   Updated: 2022/05/14 02:57:38 by dcyprien         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,8 @@
 
 void	*ft_memmove(void *dst, const void *src, size_t len)
 {
-	unsigned char *d;
-	unsigned char *s;
+	unsigned char	*d;
+	unsigned char	*s;
 
 	if (dst != NULL && src != NULL && src != dst)
 	{

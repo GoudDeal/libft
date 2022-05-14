@@ -6,7 +6,7 @@
 /*   By: dcyprien <dcyprien@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/05 12:28:40 by dcyprien          #+#    #+#             */
-/*   Updated: 2020/01/07 08:55:39 by dcyprien         ###   ########.fr       */
+/*   Updated: 2022/05/14 02:57:24 by dcyprien         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 # include <stdlib.h>
 # include <unistd.h>
 
-typedef struct	s_list
+typedef struct s_list
 {
 	void			*content;
 	struct s_list	*next;
@@ -43,11 +43,11 @@ int				ft_strncmp(const char *s1, const char *s2, size_t n);
 size_t			ft_strlcpy(char *dst, const char *src, size_t dstsize);
 size_t			ft_strlcat(char *dst, const char *src, size_t dstsize);
 char			*ft_strnstr(const char *haystack,
-const char *needle, size_t len);
+					const char *needle, size_t len);
 int				ft_atoi(const char *str);
 char			*ft_strdup(const char *s1);
 char			*ft_substr(char const *s, unsigned int start,
-size_t len);
+					size_t len);
 void			*ft_calloc(size_t count, size_t size);
 char			*ft_strjoin(char const *s1, char const *s2);
 char			*ft_strtrim(char const *s1, char const *set);
@@ -66,7 +66,7 @@ void			ft_lstdelone(t_list *lst, void (*del)(void*));
 void			ft_lstclear(t_list **lst, void (*del)(void*));
 void			ft_lstiter(t_list *lst, void (*f)(void *));
 t_list			*ft_lstmap(t_list *lst, void *(*f)(void *),
-void (*del)(void *));
+					void (*del)(void *));
 t_list			*ft_lstlast(t_list *lst);
 int				ft_cinset(const char c, const char *set);
 

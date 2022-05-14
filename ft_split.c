@@ -6,7 +6,7 @@
 /*   By: dcyprien <dcyprien@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/08 17:28:15 by dcyprien          #+#    #+#             */
-/*   Updated: 2020/01/07 08:45:14 by dcyprien         ###   ########.fr       */
+/*   Updated: 2022/05/14 03:05:59 by dcyprien         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,15 +14,15 @@
 
 size_t	get_n_word(const char *s, char c)
 {
-	size_t i;
-	size_t j;
+	size_t	i;
+	size_t	j;
 
 	i = 0;
 	j = 1;
 	while (s[j])
 	{
 		if ((s[j] == c && s[j - 1] != c && s[j + 1])
-		|| (s[j] != c && s[j + 1] == '\0'))
+			|| (s[j] != c && s[j + 1] == '\0'))
 			i++;
 		j++;
 	}
@@ -31,7 +31,7 @@ size_t	get_n_word(const char *s, char c)
 
 char	*extract_word(const char *s, char c)
 {
-	int end;
+	int	end;
 
 	end = 0;
 	while (s[end] && s[end] != c)
@@ -49,7 +49,8 @@ char	**ft_split(const char *s, char c)
 	{
 		j = 0;
 		n_word = get_n_word(s, c);
-		if (!(result = ft_calloc(n_word + 1, sizeof(char*))))
+		result = ft_calloc(n_word + 1, sizeof(char *));
+		if (!result)
 			return (NULL);
 		while (j < n_word && *s)
 		{

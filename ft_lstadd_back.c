@@ -6,13 +6,13 @@
 /*   By: dcyprien <dcyprien@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/18 16:54:21 by dcyprien          #+#    #+#             */
-/*   Updated: 2019/11/18 17:13:58 by dcyprien         ###   ########.fr       */
+/*   Updated: 2022/05/14 02:57:52 by dcyprien         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void		ft_lstadd_back(t_list **alst, t_list *new)
+void	ft_lstadd_back(t_list **alst, t_list *new)
 {
 	t_list	*i;
 

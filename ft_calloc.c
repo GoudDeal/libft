@@ -6,7 +6,7 @@
 /*   By: dcyprien <dcyprien@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/06 17:15:36 by dcyprien          #+#    #+#             */
-/*   Updated: 2020/01/07 08:28:31 by dcyprien         ###   ########.fr       */
+/*   Updated: 2022/05/14 02:54:59 by dcyprien         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,8 @@ void	*ft_calloc(size_t count, size_t size)
 
 	if (count != 0 && size != 0)
 	{
-		if (!(mem = malloc(count * size)))
+		mem = malloc(count * size);
+		if (!mem)
 			return (NULL);
 		ft_bzero(mem, count * size);
 		return (mem);

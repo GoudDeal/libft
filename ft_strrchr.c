@@ -6,7 +6,7 @@
 /*   By: dcyprien <dcyprien@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/06 10:59:35 by dcyprien          #+#    #+#             */
-/*   Updated: 2020/01/07 08:48:10 by dcyprien         ###   ########.fr       */
+/*   Updated: 2022/05/14 03:10:54 by dcyprien         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,17 +14,23 @@
 
 char	*ft_strrchr(const char *s, int c)
 {
-	char *result;
+	char	*result;
 
 	result = NULL;
 	if (s != NULL)
 	{
 		while (*s)
 		{
-			result = (c == *s) ? (char*)s : result;
+			if (*s == c)
+				result = (char *)s;
+			else
+				result = result;
 			s++;
 		}
-		result = (c == '\0') ? (char*)s : result;
+		if (c == '\0')
+			result = (char *)s;
+		else
+			result = result;
 	}
 	return (result);
 }
